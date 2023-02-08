@@ -15,10 +15,13 @@ body{
 .stopwatch{
     margin: auto;
     padding: auto;
+    min-width: 40vw;
 }
 
 .stopwatch-time{
     font-size: 10rem;
+    display: flex;
+    justify-content: space-around;
 }
 .stopwatch-controls{
     display: flex;

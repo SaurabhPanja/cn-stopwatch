@@ -4,6 +4,7 @@
   let stopCounterToClearInterval = 1;
   let isRunning = false;
 
+  //start button to start the timer
   document.querySelector("#start-btn").addEventListener("click", () => {
     if (isRunning) return;
     isRunning = true;
@@ -15,16 +16,18 @@
       seconds = Math.floor(milliSeconds / 100);
       document.querySelector("#display-seconds").innerHTML =
         seconds < 10 ? "0" + seconds : seconds;
-        
+
       milliSeconds++;
     }, 10);
   });
 
+  //stop button to stop the timer
   document.querySelector("#stop-btn").addEventListener("click", () => {
     clearInterval(stopCounterToClearInterval);
     isRunning = false;
   });
 
+  //reset button to reset the timer
   document.querySelector("#reset-btn").addEventListener("click", () => {
     clearInterval(stopCounterToClearInterval);
     milliSeconds = 0;
